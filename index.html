@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Prayerful Pages by NN DIGITALS — Christian prayer books, devotionals, Scripture reflections, and encouragement for every season of life.">
+
+<meta name="keywords" content="Christian prayer books, prayer books, Christian devotionals, Bible prayer books, Scripture prayers, Christian encouragement, NN DIGITALS">
+
+<meta name="theme-color" content="#70564a">
+
+<title>Prayerful Pages | Christian Prayer Books by NN DIGITALS</title>
+
+<style>
+
+:root {
+    --ink: #352b27;
+    --muted: #756963;
+    --cream: #fbf8f3;
+    --paper: #fffdf9;
+    --accent: #70564a;
+    --accent-dark: #594238;
+    --accent-light: #a27b61;
+    --gold: #c59b5d;
+    --line: #e7ddd3;
+    --shadow: 0 12px 35px rgba(52,38,28,.11);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,253,249,.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--accent);
+}
+
+.brand small {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--accent-light);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #eee2d5,
+            #fffaf4 55%,
+            #e4d2c3
+        );
+
+    padding: 82px 22px 75px;
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 900px;
+    margin: auto;
+}
+
+.eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+}
+
+.hero h1 {
+    font-size: clamp(44px, 7vw, 76px);
+    line-height: 1.02;
+    margin: 12px 0 16px;
+    color: #49372f;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 760px;
+    margin: 0 auto 28px;
+    color: #62554e;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 999px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+    transition: .2s;
+}
+
+.hero-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 62px 22px;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-head h2 {
+    font-size: 38px;
+    margin: 0 0 5px;
+    color: #49372f;
+}
+
+.section-head p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 0 35px;
+}
+
+#search {
+    width: min(600px, 100%);
+    padding: 14px 19px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+#search:focus {
+    border-color: var(--accent-light);
+    box-shadow: 0 0 0 3px rgba(162,123,97,.12);
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.filter {
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--ink);
+    padding: 9px 13px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* =========================
+   BOOK GRID
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* =========================
+   BOOK CARD
+========================= */
+
+.card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 24px rgba(52,38,28,.06);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   BOOK COVER
+========================= */
+
+.cover-wrap {
+    background: #f0ebe5;
+
+    padding: 18px;
+
+    height: 395px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 3px;
+
+    display: block;
+}
+
+/* =========================
+   BOOK INFORMATION
+========================= */
+
+.card-body {
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.category {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+
+    color: var(--accent-light);
+
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 17px;
+    line-height: 1.4;
+
+    margin: 0 0 16px;
+}
+
+/* =========================
+   AMAZON BUTTON
+========================= */
+
+.buy {
+    margin-top: auto;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    background: var(--accent);
+    color: white;
+
+    border-radius: 7px;
+
+    padding: 11px 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.buy:hover {
+    background: var(--accent-dark);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #efe5db;
+}
+
+.about-inner {
+    max-width: 850px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.about p {
+    font-size: 17px;
+    color: #5e524b;
+}
+
+.note {
+    margin-top: 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #3e312b;
+    color: #eee4dc;
+
+    padding: 40px 22px 25px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.footer-inner h3 {
+    margin: 0 0 7px;
+
+    font-size: 21px;
+}
+
+.footer-inner p {
+    margin: 4px 0;
+
+    color: #d9cec5;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footer-inner a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-inner a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.16);
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    color: #bfb3ab;
+
+    width: 100%;
+}
+
+/* =========================
+   EMPTY SEARCH
+========================= */
+
+.empty {
+    text-align: center;
+
+    padding: 55px;
+
+    color: var(--muted);
+
+    grid-column: 1 / -1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    .nav-inner {
+        padding: 12px 16px;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 60px 18px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .cover-wrap {
+        height: 315px;
+    }
+
+    .card-body {
+        padding: 14px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .nav-links a:first-child {
+        display: none;
+    }
+
+    .grid {
+        gap: 12px;
+    }
+
+    .cover-wrap {
+        height: 270px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .buy {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="nav">
+
+    <div class="nav-inner">
+
+        <a class="brand" href="#home">
+
+            PRAYERFUL PAGES
+
+            <small>BY NN DIGITALS</small>
+
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#books">Books</a>
+
+            <a href="#about">About</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="home">
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            Christian Prayer Books & Devotionals
+        </div>
+
+        <h1>
+            Prayerful Pages
+        </h1>
+
+        <p>
+            Christian prayer books for every season of life —
+            words of faith, hope, strength, comfort, and encouragement.
+        </p>
+
+        <a class="hero-btn" href="#books">
+            Explore the Collection
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     BOOKS
+========================= -->
+
+<section class="section" id="books">
+
+    <div class="section-head">
+
+        <h2>
+            Our Books
+        </h2>
+
+        <p>
+            Explore prayer and devotional books from NN DIGITALS.
+        </p>
+
+    </div>
+
+
+    <div class="toolbar">
+
+        <input
+            id="search"
+            type="search"
+            placeholder="Search books..."
+            aria-label="Search books"
+        >
+
+        <div
+            class="filters"
+            id="filters">
+        </div>
+
+    </div>
+
+
+    <div
+        class="grid"
+        id="bookGrid">
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT NN DIGITALS
+========================= -->
+
+<section
+    class="section about"
+    id="about">
+
+    <div class="about-inner">
+
+        <div class="eyebrow">
+            About the Publisher
+        </div>
+
+        <h2>
+            NN DIGITALS
+        </h2>
+
+        <p>
+            NN DIGITALS is an independent publishing imprint
+            creating accessible books for readers seeking faith,
+            encouragement, reflection, and practical inspiration.
+            Our Christian collection focuses on prayer, Scripture,
+            devotionals, and encouragement for the many seasons
+            and circumstances of life.
+        </p>
+
+        <p>
+            We believe books can become quiet companions —
+            offering a place to pause, reflect, pray, and reconnect
+            with what matters most. Our prayer and devotional books
+            are designed to be approachable and useful in everyday
+            life, whether someone is beginning a prayer routine,
+            walking through a difficult season, seeking encouragement,
+            or simply spending intentional time with God.
+        </p>
+
+        <p>
+            NN DIGITALS publishes books across a range of accessible
+            formats and subjects, with an emphasis on clear
+            presentation, reader-friendly organization, and
+            meaningful reading experiences.
+        </p>
+
+        <p class="note">
+            Prayerful Pages is a book showcase.
+            Purchases are completed through Amazon.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <h3>
+                Prayerful Pages
+            </h3>
+
+            <p>
+                Christian Prayer Books for Every Season of Life
+            </p>
+
+            <p>
+                Published by NN DIGITALS
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                <a href="mailto:pamarthikrishnasayee@gmail.com">
+                    pamarthikrishnasayee@gmail.com
+                </a>
+            </p>
+
+            <p>
+                
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-inner">
+
+        <div class="copyright">
+
+            © 2026 NN DIGITALS.
+            All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     BOOK DATA + JAVASCRIPT
+========================= -->
+
+<script>
+
+const books = [
+
+{
+title:
+"365-Day Bible Verse Prayer Devotional: A Scripture and Prayer for Every Day of the Year — to Grow Your Faith, Deepen Your Prayer Life, and Draw You Closer to God",
+
+image:
+"images/1.jpg",
+
+amazon:
+"https://a.co/d/0dybaHZ4",
+
+category:
+"Devotionals"
+},
+
+{
+title:
+"Prayers for the Anxious Heart: 100 Prayers for Peace When Worry Won't Stop",
+
+image:
+"images/2.jpg",
+
+amazon:
+"https://a.co/d/02jLyNKW",
+
+category:
+"Peace & Anxiety"
+},
+
+{
+title:
+"Prayers for Financial Breakthrough: 90 Prayers for Provision, Debt Relief, and Financial Freedom",
+
+image:
+"images/3.jpg",
+
+amazon:
+"https://a.co/d/03uWfVq4",
+
+category:
+"Finances & Provision"
+},
+
+{
+title:
+"Prayers for Hard Seasons: 90 Prayers for the Seasons That Break You Open",
+
+image:
+"images/4.jpg",
+
+amazon:
+"https://a.co/d/0ipF5t9k",
+
+category:
+"Strength & Encouragement"
+},
+
+{
+title:
+"Warfare Prayers for Your Marriage: Powerful Battle Prayers to Protect, Strengthen, and Restore Your Husband, Your Home, and Your Covenant",
+
+image:
+"images/5.jpg",
+
+amazon:
+"https://a.co/d/0eVPQi6M",
+
+category:
+"Marriage & Family"
+},
+
+{
+title:
+"Trusting God in the Waiting: 90 Days of Hope for the Waiting Heart",
+
+image:
+"images/6.jpg",
+
+amazon:
+"https://a.co/d/072B97Wn",
+
+category:
+"Hope & Waiting"
+},
+
+{
+title:
+"A Woman's Prayer & Devotional Journal: 90 Days of Scripture, Reflection, and Grace",
+
+image:
+"images/7.jpg",
+
+amazon:
+"https://a.co/d/0fKJEeBG",
+
+category:
+"Women"
+},
+
+{
+title:
+"30-Day Morning Prayer: Daily Scripture, Prayer, and Encouragement to Start Your Day With God",
+
+image:
+"images/8.jpg",
+
+amazon:
+"https://a.co/d/02ioAj83",
+
+category:
+"Prayer & Devotionals"
+},
+
+{
+title:
+"Peace for the Restless: 90 Days of Calm for a Restless Heart",
+
+image:
+"images/9.jpg",
+
+amazon:
+"https://a.co/d/0cl336Sp",
+
+category:
+"Peace & Anxiety"
+},
+
+{
+title:
+"Trusting Tomorrow: 90 Days of Scripture, Prayer, and Hope for When You Can't See the Way",
+
+image:
+"images/10.jpg",
+
+amazon:
+"https://a.co/d/01HjGahS",
+
+category:
+"Hope & Waiting"
+},
+
+{
+title:
+"Worry Less, Trust More: 90 Days of Scripture, Prayer, and Peace for the Heart That Carries Too Much",
+
+image:
+"images/11.jpg",
+
+amazon:
+"https://a.co/d/0btGMd5p",
+
+category:
+"Peace & Anxiety"
+},
+
+{
+title:
+"For the Anxious Man: 90 Days of Scripture, Prayer, and Strength for the Silent Struggle",
+
+image:
+"images/12.jpg",
+
+amazon:
+"https://a.co/d/0dQvPmn8",
+
+category:
+"Men"
+},
+
+{
+title:
+"God Is Near to the Brokenhearted: 90 Days of Scripture, Prayer, and Encouragement for the Brokenhearted",
+
+image:
+"images/13.jpg",
+
+amazon:
+"https://a.co/d/0egGVKku",
+
+category:
+"Grief & Loss"
+},
+
+{
+title:
+"When You Don’t Know What to Pray: 90 Days of Scripture, Prayer, and Encouragement for When Words Won’t Come",
+
+image:
+"images/14.jpg",
+
+amazon:
+"https://a.co/d/08m3Hu57",
+
+category:
+"Prayer & Devotionals"
+},
+
+{
+title:
+"Her Quiet Place: 90 Days of Scripture, Prayer, and Encouragement for the Woman Who Needs Rest and Stillness",
+
+image:
+"images/15.jpg",
+
+amazon:
+"https://a.co/d/0fRsgv0R",
+
+category:
+"Women"
+},
+
+{
+title:
+"When Your Heart Won’t Be Still: 90 Days of Scripture, Prayer, and Christian Encouragement for Worry, Fear, and Finding God’s Peace",
+
+image:
+"images/16.jpg",
+
+amazon:
+"https://a.co/d/0eAMV3lE",
+
+category:
+"Peace & Anxiety"
+},
+
+{
+title:
+"Women of the Bible: 90 Days of Scripture, Prayer, and Encouragement from the Women Who Walked with God",
+
+image:
+"images/17.jpg",
+
+amazon:
+"https://a.co/d/09q7A2Sv",
+
+category:
+"Women"
+},
+
+{
+title:
+"Prayers for Healing and Strength: Powerful Prayer Points and Scripture Declarations for Physical, Emotional, and Spiritual Healing, Divine Strength, and...",
+
+image:
+"images/18.jpg",
+
+amazon:
+"https://a.co/d/07UcpE2P",
+
+category:
+"Healing & Health"
+},
+
+{
+title:
+"Warfare Prayers for Finances & Job: Powerful Battle Prayers for Financial Breakthrough, Debt Cancellation, Career Protection, and Divine Provision",
+
+image:
+"images/19.jpg",
+
+amazon:
+"https://a.co/d/0dhQ2WHy",
+
+category:
+"Finances & Provision"
+},
+
+{
+title:
+"Prayers for Mothers: Powerful Prayer Points and Scripture Declarations for Mothers Seeking Strength, Wisdom, and God's Grace",
+
+image:
+"images/20.jpg",
+
+amazon:
+"https://a.co/d/0feD0DQE",
+
+category:
+"Mothers & Family"
+},
+
+{
+title:
+"Prayers for Men: Strength and Guidance: Powerful Prayer Points and Scripture Declarations for Men Seeking Strength, Courage, and Divine Direction",
+
+image:
+"images/21.jpg",
+
+amazon:
+"https://a.co/d/0hIgza58",
+
+category:
+"Men"
+},
+
+{
+title:
+"Prayers for Breakthrough and Deliverance: Powerful Prayer Points and Scripture Declarations for Breakthrough, Deliverance, Freedom from Bondage, and Total...",
+
+image:
+"images/22.jpg",
+
+amazon:
+"https://a.co/d/01WEum8s",
+
+category:
+"Breakthrough & Deliverance"
+},
+
+{
+title:
+"Prayers for Cancer Patients: Powerful Prayer Points and Scripture Declarations for Strength, Healing, and Hope on the Cancer Journey",
+
+image:
+"images/23.jpg",
+
+amazon:
+"https://a.co/d/0h2teeLn",
+
+category:
+"Healing & Health"
+},
+
+{
+title:
+"Prayers for Wisdom and Guidance: Powerful Prayer Points and Scripture Declarations for Divine Direction, Godly Decision-Making, and Clear Guidance",
+
+image:
+"images/24.jpg",
+
+amazon:
+"https://a.co/d/0fr9ZYT3",
+
+category:
+"Wisdom & Guidance"
+},
+
+{
+title:
+"Prayers for Children and Family: Powerful Prayer Points and Scripture Declarations for the Protection, Wisdom, and Blessing of Your Children and Home",
+
+image:
+"images/25.jpg",
+
+amazon:
+"https://a.co/d/0a90y9j1",
+
+category:
+"Children & Family"
+},
+
+{
+title:
+"Prayers for Nurses: Powerful Prayer Points and Scripture Declarations for Strength, Wisdom, Compassion, and God's Rest in the Calling of Nursing",
+
+image:
+"images/26.jpg",
+
+amazon:
+"https://a.co/d/02PZdoup",
+
+category:
+"Nurses & Caregivers"
+},
+
+{
+title:
+"Prayers for Grief and Loss: Powerful Prayer Points and Scripture Declarations for Comfort, Healing, and Strength in Seasons of Sorrow",
+
+image:
+"images/27.jpg",
+
+amazon:
+"https://a.co/d/0gzv6bEQ",
+
+category:
+"Grief & Loss"
+},
+
+{
+title:
+"Prayers for Peace and Anxiety Relief: Calming Bible Verses and Prayer Points for Women to Overcome Worry, Find Rest, and Trust God",
+
+image:
+"images/28.jpg",
+
+amazon:
+"https://a.co/d/0hxs2oXa",
+
+category:
+"Peace & Anxiety"
+},
+
+{
+title:
+"Prayers for Teachers: Powerful Prayer Points and Scripture Declarations for Strength, Wisdom, Patience, and God's Rest in the Calling of Teaching",
+
+image:
+"images/29.jpg",
+
+amazon:
+"https://a.co/d/0ipUqv9k",
+
+category:
+"Teachers & Caregivers"
+},
+
+{
+title:
+"Prayers for Protection and Safety: Powerful Prayer Points and Scripture Declarations for Divine Protection over You, Your Family, and Your Home",
+
+image:
+"images/30.jpg",
+
+amazon:
+"https://a.co/d/069FAPHK",
+
+category:
+"Protection & Safety"
+}
+
+];
+
+
+/* =========================
+   SEARCH + FILTER
+========================= */
+
+const grid =
+document.getElementById("bookGrid");
+
+const filters =
+document.getElementById("filters");
+
+const search =
+document.getElementById("search");
+
+let activeCategory = "All";
+
+
+/* CREATE CATEGORY LIST */
+
+const categories = [
+    "All",
+    ...new Set(
+        books.map(book => book.category)
+    )
+];
+
+
+/* CREATE FILTER BUTTONS */
+
+categories.forEach(category => {
+
+    const button =
+        document.createElement("button");
+
+    button.className =
+        "filter" +
+        (category === "All"
+            ? " active"
+            : "");
+
+    button.textContent =
+        category;
+
+    button.onclick = () => {
+
+        activeCategory =
+            category;
+
+        document
+            .querySelectorAll(".filter")
+            .forEach(button =>
+                button.classList.remove("active")
+            );
+
+        button.classList.add("active");
+
+        renderBooks();
+
+    };
+
+    filters.appendChild(button);
+
+});
+
+
+/* =========================
+   ESCAPE HTML
+========================= */
+
+function escapeHTML(value) {
+
+    return String(value).replace(
+        /[&<>"']/g,
+
+        character => ({
+
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+
+        }[character])
+
+    );
+
+}
+
+
+/* =========================
+   RENDER BOOKS
+========================= */
+
+function renderBooks() {
+
+    const searchTerm =
+        search.value
+        .trim()
+        .toLowerCase();
+
+
+    const visibleBooks =
+        books.filter(book => {
+
+            const categoryMatch =
+                activeCategory === "All" ||
+                book.category === activeCategory;
+
+
+            const searchMatch =
+                !searchTerm ||
+
+                book.title
+                    .toLowerCase()
+                    .includes(searchTerm)
+
+                ||
+
+                book.category
+                    .toLowerCase()
+                    .includes(searchTerm);
+
+
+            return (
+                categoryMatch &&
+                searchMatch
+            );
+
+        });
+
+
+    grid.innerHTML = "";
+
+
+    if (visibleBooks.length === 0) {
+
+        grid.innerHTML = `
+            <div class="empty">
+                No books found.
+                Try another search.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    visibleBooks.forEach(book => {
+
+        const card =
+            document.createElement("article");
+
+        card.className =
+            "card";
+
+
+        card.innerHTML = `
+
+            <div class="cover-wrap">
+
+                <img
+                    class="cover"
+                    src="${escapeHTML(book.image)}"
+                    alt="${escapeHTML(book.title)}"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="card-body">
+
+                <div class="category">
+                    ${escapeHTML(book.category)}
+                </div>
+
+
+                <h3 class="title">
+                    ${escapeHTML(book.title)}
+                </h3>
+
+
+                <a
+                    class="buy"
+                    href="${escapeHTML(book.amazon)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View on Amazon →
+                </a>
+
+            </div>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================
+   SEARCH EVENT
+========================= */
+
+search.addEventListener(
+    "input",
+    renderBooks
+);
+
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+renderBooks();
+
+</script>
+
+</body>
+</html>
